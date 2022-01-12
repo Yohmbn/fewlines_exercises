@@ -9,7 +9,7 @@ let chosenCar = "Fiat Multipla";
 
 switch (chosenCar) {
   case "Nissan Cube" :
-    console.log("Wonderful and well made!");  
+    console.log("Wonderful and well made!");
     break;
   case "Fiat Multipla" :
     console.log("The most iconic Italian car! I can sell it for 50 percent less, just for you!");
