@@ -16,5 +16,13 @@ function filteredRoles(persons, role1 = "Teacher") {
   console.log(tableau);
 }
 
+const newPersons = [
+  { name: "name1", role: "role1" },
+  { name: "name2", role: "Teacher" },
+  { name: "name3", role: "Student" },
+  { name: "name4", role: "Teacher" },
+];
+
+filteredRoles(newPersons, "Student");
 // Do not remove lines below, it is for tests
 module.exports = filteredRoles;
