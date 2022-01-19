@@ -1,6 +1,6 @@
-let i = 0;
+let compteur = 0;
 
-function sub(reader, min, max) {
+function sub(reader, min, max, compteur = 0) {
   reader.question("Enter a number\n", (reponse = "") => {
     let newMin = Math.ceil(min);
     let newMax = Math.floor(max);
@@ -10,15 +10,15 @@ function sub(reader, min, max) {
       if (reponse >= newMin && reponse <= newMax) {
         if (reponse > a) {
           console.log("Too high");
-          i = i + 1;
-          sub(reader, min, max);
+
+          sub(reader, min, max, compteur++);
         } else if (reponse < a - 1) {
           console.log("Too low");
-          i = i + 1;
-          sub(reader, min, max);
+
+          sub(reader, min, max, compteur++);
         } else {
           console.log("You won!");
-          console.log(i);
+          console.log(compteur);
         }
       } else {
         console.log("The number is between 1 and 100");
@@ -38,7 +38,7 @@ function sub(reader, min, max) {
 function numberGameWithStats(reader, min = 1, max = 100) {
   console.log("Welcome!\nYou have to find the right number, between 1 and 100!\nGood luck!!");
   sub(reader, min, max);
-  i = 0;
+  compteur = 0;
 }
 
 module.exports = numberGameWithStats;
