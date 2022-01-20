@@ -2,7 +2,7 @@ function shouldIMakeATicket(isStuck = false, timeBeingStuck = 20, hourOfTheDay =
   //   if (
   //     isStuck === true &&
   //     timeBeingStuck >= 20 &&
-  //     ((13 >= hourOfTheDay && hourOfTheDay >= 9) || (18 >= hourOfTheDay && hourOfTheDay >= 14))
+  //     ((13 > hourOfTheDay && hourOfTheDay >= 9) || (18 > hourOfTheDay && hourOfTheDay >= 14))
   //   ) {
   //     return true;
   //   } else {
