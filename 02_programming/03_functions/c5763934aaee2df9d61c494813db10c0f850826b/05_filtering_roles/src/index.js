@@ -13,7 +13,7 @@ function filteredRoles(persons, role1 = "Teacher") {
   if (persons[3].role === role1) {
     tableau.push(persons[3]);
   }
-  console.log(tableau);
+  return tableau;
 }
 
 const newPersons = [
