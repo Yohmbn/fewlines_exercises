@@ -6,9 +6,7 @@ const readcode = require("./readcode");
 let studentCode;
 beforeAll(() => {
   // Loads the student's code
-  studentCode = readcode(
-    path.resolve(__dirname, "../src/index.js")
-  );
+  studentCode = readcode(path.resolve(__dirname, "../src/index.js"));
   return studentCode;
 });
 
@@ -25,10 +23,8 @@ describe("#05_play_with_slice", () => {
   test("hobbyQuestion should replace profession by hobby, no matter what the first 21 characters of the sentence are", () => {
     return studentCode.then((code) => {
       const changedStudentCode = code.replace(
-        new RegExp(
-          "spartan, what is your profession"
-        ),
-        "spartan, this is your profession"
+        new RegExp("spartan, what is your profession"),
+        "spartan, this is your profession",
       );
 
       const hobbyQuestion = eval(changedStudentCode + "; hobbyQuestion;");
@@ -50,12 +46,7 @@ describe("#05_play_with_slice", () => {
 
   test("hobbyQuestionLength should equal to the length of question, no mater how long it is", () => {
     return studentCode.then((code) => {
-      const changedStudentCode = code.replace(
-        new RegExp(
-          "spartan, what is your profession"
-        ),
-        "yes?"
-      );
+      const changedStudentCode = code.replace(new RegExp("spartan, what is your profession"), "yes?");
       const hobbyQuestionLength = eval(changedStudentCode + "; hobbyQuestionLength;");
       const expectedLength = 14;
 
