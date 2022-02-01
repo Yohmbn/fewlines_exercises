@@ -1,5 +1,5 @@
 class Tree {
-  age: number;
+  age: number = 0;
   height: number = 335;
   alive : boolean = true;
 
