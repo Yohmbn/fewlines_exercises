@@ -6,10 +6,9 @@ type Human = {
 
 type Dev = Human & { knownLanguage : string}
 
-function becomeADev<Human,Dev>(object : Human) : Dev{
-  object.knowsDev  = true;
-  object.knownLanguage = "JavaScript"
-  return object
+function becomeADev(object : Human) : Dev{
+  const Dev : Dev = Object.assign(object, {knownLanguage : "JavaScript",knowsDev  : true})
+  return Dev
 }
 
 // Leave the line below for tests to work properly.
