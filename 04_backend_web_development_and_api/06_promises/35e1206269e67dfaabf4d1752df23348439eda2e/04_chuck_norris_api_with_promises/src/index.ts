@@ -1,12 +1,12 @@
 import { getCategories, getJoke } from "./chuck";
 
-// getCategories()
-//   .then((categories) => {
-//     console.log(categories);
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
+getCategories()
+  .then((categories) => {
+    console.log(categories);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 getJoke("dev")
   .then((joke) => {
